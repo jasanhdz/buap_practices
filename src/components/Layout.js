@@ -1,12 +1,7 @@
 import React from "react";
 
 const Layout = ({ children }) => {
-  return (
-    <React.Fragment>
-      {children}
-      <h1>Soy el footer</h1>
-    </React.Fragment>
-  );
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default Layout;

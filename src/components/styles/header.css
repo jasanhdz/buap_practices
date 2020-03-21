@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  padding: 12px 0;
+  justify-content: flex-start;
+}
+
+.Header__group {
+  max-width: 324px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 55px;
+}
+
+.Header__group-logo {
+  width: 32px;
+  height: 32px;
+}
+
+@media screen and (max-width: 500px) {
+  .Header__group {
+    max-width: 100%;
+    justify-content: space-evenly;
+  }
+}

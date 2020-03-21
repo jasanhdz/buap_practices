@@ -1,0 +1,9 @@
+.Footer {
+  display: flex;
+  justify-content: center;
+}
+
+.Footer .subtitle {
+  font-family: "Lobster", cursive;
+  color: #747487;
+}
