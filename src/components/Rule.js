@@ -1,33 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
+import { setApuntador, setRegla, setSalir } from "../actions/bankActions";
 
 const Rule = props => {
-  const [regla, setRegla] = useState(props.rules[0]);
-  const [apuntador, setApuntador] = useState(0);
-  const [salir, setSalir] = useState(null);
   const nextRule = e => {
-    setApuntador(apuntador + 1);
-    apuntador == 0
-      ? setRegla(props.rules[1])
-      : setRegla(props.rules[apuntador]);
-    console.log(apuntador + 1);
+    props.setApuntador(props.apuntador + 1);
+    props.setRegla(props.rules[props.apuntador]);
+    console.log(props.apuntador);
   };
-
   const goOut = e => {
-    setSalir(true);
+    props.setSalir(true);
   };
 
-  if (apuntador === props.rules.length) {
+  if (props.apuntador === props.rules.length) {
     return <h1>{props.success}</h1>;
   }
 
-  if (salir) {
+  if (props.salir) {
     return <h1>{props.fail}</h1>;
   }
 
   return (
     <div>
-      <p>{regla}</p>
+      <p>{props.rule}</p>
       <button onClick={nextRule}>Si</button>
       <button onClick={goOut}>No</button>
     </div>
@@ -38,8 +33,17 @@ const mapStateToProps = (state, props) => {
   return {
     rules: state.bank.reglas,
     success: state.bank.baseDeConocimiento.Success,
-    fail: state.bank.baseDeConocimiento.Fallo
+    fail: state.bank.baseDeConocimiento.Fallo,
+    apuntador: state.bank.apuntador,
+    rule: state.bank.rule,
+    salir: state.bank.salir
   };
 };
 
-export default connect(mapStateToProps)(Rule);
+const mapDispatchToProps = {
+  setApuntador,
+  setRegla,
+  setSalir
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Rule);
