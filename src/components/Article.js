@@ -10,7 +10,9 @@ const Article = () => {
         <Link to="/bank_expert">
           <button className="btn primary">práctica</button>
         </Link>
-        <button className="btn primary">repositorio</button>
+        <Link to="//github.com/JasanHdz/buap_practices" target="_blank">
+          <button className="btn primary">repositorio</button>
+        </Link>
       </article>
     </div>
   );
