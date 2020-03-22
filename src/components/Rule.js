@@ -3,6 +3,12 @@ import { connect } from "react-redux";
 import { setApuntador, setRegla, setSalir } from "../actions/bankActions";
 
 const Rule = props => {
+  const reset = e => {
+    props.setRegla(props.rules[0]);
+    props.setApuntador(1);
+    props.setSalir(null);
+  };
+
   const nextRule = e => {
     props.setApuntador(props.apuntador + 1);
     props.setRegla(props.rules[props.apuntador]);
@@ -13,18 +19,42 @@ const Rule = props => {
   };
 
   if (props.apuntador === props.rules.length) {
-    return <h1>{props.success}</h1>;
+    return (
+      <div className="Article__container">
+        <article className="Article">
+          <h2 className="Home__subtitle">{props.success}</h2>
+          <button onClick={reset} className="btn primary">
+            ¿Volver a intentar?
+          </button>
+        </article>
+      </div>
+    );
   }
 
   if (props.salir) {
-    return <h1>{props.fail}</h1>;
+    return (
+      <div className="Article__container">
+        <article className="Article">
+          <h2 className="Subtitle">{props.fail}</h2>
+          <button onClick={reset} className="btn primary">
+            ¿Volver a intentar?
+          </button>
+        </article>
+      </div>
+    );
   }
 
   return (
-    <div>
-      <p>{props.rule}</p>
-      <button onClick={nextRule}>Si</button>
-      <button onClick={goOut}>No</button>
+    <div className="Article__container">
+      <article className="Article">
+        <p>{props.rule}</p>
+        <button className="btn primary" onClick={nextRule}>
+          Si
+        </button>
+        <button className="btn primary" onClick={goOut}>
+          No
+        </button>
+      </article>
     </div>
   );
 };

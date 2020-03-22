@@ -21,6 +21,11 @@
 @media screen and (max-width: 500px) {
   .Header__group {
     max-width: 100%;
-    justify-content: space-evenly;
+    justify-content: right;
+  }
+  .Header__group-logo {
+    width: 28px;
+    height: 28px;
+    margin-left: 18px;
   }
 }
