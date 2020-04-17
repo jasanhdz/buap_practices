@@ -35,7 +35,7 @@ const Rule = props => {
     return (
       <div className="Article__container">
         <article className="Article">
-          <h2 className="Subtitle">{props.fail}</h2>
+          <h2 className="Subtitle red">{props.fail}</h2>
           <button onClick={reset} className="btn primary">
             ¿Volver a intentar?
           </button>
@@ -47,7 +47,7 @@ const Rule = props => {
   return (
     <div className="Article__container">
       <article className="Article">
-        <p>{props.rule}</p>
+        <h2 className="Subtitle">{props.rule}</h2>
         <button className="btn primary" onClick={nextRule}>
           Si
         </button>

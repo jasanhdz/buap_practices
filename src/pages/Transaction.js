@@ -3,11 +3,11 @@ import Rule from '../components/Rule';
 import HeaderLight from '../components/HeaderLight';
 import Footer from '../components/Footer';
 
-const Bank = (props) => {
+const Transaction = (props) => {
   return (
     <div className='Container'>
       <HeaderLight />
-      <h1 className='Home__title'>Sistema experto Bancario</h1>
+      <h1 className='Home__title'>Sistema experto Transación</h1>
       <Rule />
       <div className='bottom'>
         <Footer />
@@ -16,4 +16,4 @@ const Bank = (props) => {
   );
 };
 
-export default Bank;
+export default Transaction;

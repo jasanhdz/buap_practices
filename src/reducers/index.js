@@ -1,8 +1,8 @@
-import { combineReducers } from "redux";
-import bank from "./bank";
+import { combineReducers } from 'redux';
+import bank from './bank';
 
 const rootReducer = combineReducers({
-  bank
+  bank,
 });
 
 export default rootReducer;

@@ -28,14 +28,14 @@ body {
 
 .Home__title {
   text-align: center;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   color: #e6848e;
   margin: 34px 0 0 0;
 }
 
 .Home__subtitle {
   color: #747487;
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
 }
 
 .Article__container {
@@ -54,10 +54,12 @@ body {
   box-sizing: border-box;
   padding: 3px 22px 8px;
   box-shadow: 3px 8px 6px rgba(0, 0, 0, 0.335);
+  text-align: center;
 }
 
 .Article p {
   font-family: sans-serif;
+  padding: 0 10px;
 }
 
 .btn {
@@ -71,6 +73,7 @@ body {
   margin: 2px;
   cursor: pointer;
   outline: none;
+  margin-bottom: 10px;
   transition: 0.2s;
   will-change: transform;
 }
@@ -90,7 +93,6 @@ body {
   }
   .Container {
     width: 100%;
-    padding: 0 10px;
   }
 
   .Article__container {
@@ -130,7 +132,8 @@ body {
 
 .Subtitle {
   color: #747487;
-  font-family: cursive;
+  font-family: sans-serif;
+  padding: 10px;
 }
 
 .bottom {
@@ -145,4 +148,8 @@ body {
   margin: 0;
   padding-left: 10px;
   cursor: pointer;
+}
+
+.red {
+  color: red;
 }
