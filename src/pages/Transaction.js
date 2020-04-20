@@ -5,13 +5,9 @@ import Footer from '../components/Footer';
 
 const Transaction = (props) => {
   return (
-    <div className='Container'>
+    <div className='Container__Center'>
       <HeaderLight />
-      <div
-        style={{
-          minHeight: 400,
-        }}
-      >
+      <div className='Card_container'>
         <h1 className='Home__title'>Sistema experto Transación</h1>
         <Rule />
       </div>

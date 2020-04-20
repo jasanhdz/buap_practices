@@ -9,6 +9,14 @@ body {
   background-position-y: 83px;
 }
 
+.date {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  color: #747487;
+  font-style: italic;
+}
+
 #app {
   width: 100%;
   display: flex;
@@ -17,10 +25,17 @@ body {
 
 .Container {
   width: 1010px;
+}
+
+.Container__Center {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+}
+
+.Card_container {
+  min-height: 400px;
 }
 
 .Home__container {

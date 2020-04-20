@@ -6,6 +6,7 @@ const Article = (props) => {
     <div className='Article__container'>
       <article className='Article'>
         <h2 className='Home__subtitle'>{props.subtitle}</h2>
+        <p className='date'> Fecha de entrega: {props.date}</p>
         <p>{props.description}</p>
         <Link to={props.page}>
           <button className='btn primary'>práctica</button>

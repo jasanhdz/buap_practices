@@ -15,6 +15,7 @@ const HomeContent = () => {
           description={card.description}
           page={card.page}
           respositorio={card.respositorio}
+          date={card.date}
         />
       ))}
     </div>

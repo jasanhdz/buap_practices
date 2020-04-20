@@ -4,13 +4,15 @@
       "subtitle": "Sistema experto Bancario",
       "description": "Usando el ejemplo del cajero para codificar las reglas generales",
       "page": "/bank_expert",
-      "respositorio": "//github.com/JasanHdz/buap_practices"
+      "respositorio": "//github.com/JasanHdz/buap_practices",
+      "date": "24 Marzo 2020"
     },
     {
       "subtitle": "Transacción",
       "description": "Se dará un árbol en el cual están plasmadas las reglas para poder encontrar a los objetos que cumplen dicha condición.",
       "page": "/transaction_expert",
-      "respositorio": "//github.com/JasanHdz/buap_practices/tree/expert/Transaction"
+      "respositorio": "//github.com/JasanHdz/buap_practices/tree/expert/Transaction",
+      "date": "21 de Abril 2020"
     }
   ]
 }
