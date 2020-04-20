@@ -17,6 +17,10 @@ body {
 
 .Container {
   width: 1010px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 .Home__container {
@@ -97,6 +101,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
+  z-index: 1;
 }
 
 .back {

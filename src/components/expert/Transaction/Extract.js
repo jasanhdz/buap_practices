@@ -10,11 +10,13 @@ import { useInputValue } from '../../../hooks/useInputValue';
 
 const Extract = (props) => {
   const [sucess, setSuccess] = useState(false);
-  const quantity = useInputValue(0);
+  const quantity = useInputValue(5);
 
   const extractMoney = (e) => {
     e.preventDefault();
     if (!quantity.value) return alert('El valor del input es requerido... 😜');
+    if (quantity.value < 0)
+      return alert('No es válido que ingreses números negativos 😡');
     console.log(`Ingresó ${quantity.value}`);
     const rules = [
       `Se Retiraron ${quantity.value} USD a la cuenta`,

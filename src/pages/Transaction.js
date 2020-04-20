@@ -7,11 +7,15 @@ const Transaction = (props) => {
   return (
     <div className='Container'>
       <HeaderLight />
-      <h1 className='Home__title'>Sistema experto Transación</h1>
-      <Rule />
-      <div className='bottom'>
-        <Footer />
+      <div
+        style={{
+          minHeight: 400,
+        }}
+      >
+        <h1 className='Home__title'>Sistema experto Transación</h1>
+        <Rule />
       </div>
+      <Footer />
     </div>
   );
 };
