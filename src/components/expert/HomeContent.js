@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Article from '../components/Article';
-import data from '../cards.json';
+import Article from './Article';
+import data from '../../cards.json';
 
 const HomeContent = () => {
   const [cards] = useState(data.cards);

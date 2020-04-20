@@ -1,6 +1,6 @@
 import React from 'react';
-import Rule from '../components/Rule';
-import HeaderLight from '../components/HeaderLight';
+import Rule from '../components/expert/Rule';
+import HeaderLight from '../components/expert/HeaderLight';
 import Footer from '../components/Footer';
 
 const Bank = (props) => {
