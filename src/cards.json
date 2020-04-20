@@ -10,7 +10,7 @@
       "subtitle": "Transacción",
       "description": "Se dará un árbol en el cual están plasmadas las reglas para poder encontrar a los objetos que cumplen dicha condición.",
       "page": "/transaction_expert",
-      "respositorio": "//github.com/JasanHdz/buap_practices"
+      "respositorio": "//github.com/JasanHdz/buap_practices/tree/expert/Transaction"
     }
   ]
 }
