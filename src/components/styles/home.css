@@ -9,6 +9,11 @@ body {
   background-position-y: 83px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .date {
   font-size: 14px;
   margin: 0;
@@ -33,6 +38,8 @@ p {
 
 .Container {
   width: 1010px;
+  align-items: center;
+  align-self: center;
 }
 
 .Container__Center {

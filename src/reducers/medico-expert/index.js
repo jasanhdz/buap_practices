@@ -3,7 +3,7 @@ import { data } from './data'
 import Rules from './rules'
 
 const INITIAL_STATE = {
-  option_one: [
+  symptoms: [
     data.diarrea,
     data.tos,
     data.cansancio,
@@ -16,7 +16,7 @@ const INITIAL_STATE = {
     data.jaqueca,
     data.secrecion
   ],
-  option_two: [
+  diseases: [
     data.gripe,
     data.rubeola,
     data.malaria,
@@ -25,14 +25,15 @@ const INITIAL_STATE = {
     data.anemia
   ],
   recipe: [],
-  specialist: []
+  specialist: [],
+  disease: ""
 }
 
 function medicoExpert(state = INITIAL_STATE, { type, payload }) {
   switch (type) {
     case GET_DISEASE:
-      const { option1, option2 } = payload
-      return Rules(option1, option2, state)
+      console.log(payload)
+      return Rules(payload, state)
     default:
       return state
   }

@@ -1,50 +1,31 @@
 import { data } from '../data'
 
-function rules(option1, option2, state) {
+const malaria = [data.cansancio.value, data.dolorDeCabeza.value]
+const gripe = [data.tos.value, data.cansancio.value, data.fiebre.value, data.dolorDeCabeza.value]
+const rubeola = [data.fiebre.value, data.escalofrios.value, data.jaqueca.value, data.secrecion.value]
+const hepatitis = [data.diarrea.value, data.nauseas.value, data.ictericia.value]
+const tubercolosis = [data.tos.value, data.cansancio.value, data.fiebre.value]
+const anemia = [data.cansancio.value, data.nauseas.value, data.apatia.value]
+
+function rules(payload, state) {
   switch (true) {
-    case option1 === data.diarrea.value && option2 === data.malaria.value:
+    case JSON.stringify(payload) === JSON.stringify(malaria):
+      console.log('el payload es malaria')
       return setStateMalaria(state)
-    case option1 === data.diarrea.value && option2 === data.hepatitis.value:
+    case JSON.stringify(payload) === JSON.stringify(hepatitis):
+      console.log('el payload es hepatitis')
       return setStateHepatitis(state)
-    case option1 === data.tos.value && option2 === data.gripe.value: 
+    case JSON.stringify(payload) === JSON.stringify(gripe):
+      console.log('el payload es gripe')
       return setStateGripe(state)
-    case option1 === data.tos.value && option2 === data.tubercolosis.value: 
+    case JSON.stringify(payload) === JSON.stringify(tubercolosis):
+      console.log('el payload es tubercolosis')
       return setStateTubercolosis(state)
-    case option1 === data.cansancio.value && option2 === data.gripe.value:
-      return setStateGripe(state)
-    case option1 === data.cansancio.value && option2 === data.tubercolosis.value:
-      return setStateTubercolosis(state)
-    case option1 === data.cansancio.value && option2 === data.anemia.value:
+    case JSON.stringify(payload) === JSON.stringify(anemia):
+      console.log('el payload es anemia')
       return setStateAnemia(state)
-    case option1 === data.fiebre.value && option2 === data.gripe.value:
-      return setStateGripe(state)
-    case option1 === data.fiebre.value && option2 === data.rubeola.value:
-      return setStateRubeola(state)
-    case option1 === data.fiebre.value && option2 === data.malaria.value:
-      return setStateMalaria(state)
-    case option1 === data.fiebre.value && option2 === data.tubercolosis.value:
-      return setStateTubercolosis(state)
-    case option1 === data.dolorDeCabeza.value && option2 === data.gripe.value:
-      return setStateGripe(state)
-    case option1 === data.nauseas.value && option2 === data.hepatitis.value:
-      return setStateHepatitis(state)
-    case option1 === data.nauseas.value && option2 === data.anemia.value:
-      return setStateAnemia(state)     
-    case option1 === data.ictericia.value && option2 === data.malaria.value:
-      return setStateMalaria(state)     
-    case option1 === data.ictericia.value && option2 === data.hepatitis.value:
-      return setStateHepatitis(state)     
-    case option1 === data.apatia.value && option2 === data.anemia.value:
-      return setStateAnemia(state)     
-    case option1 === data.escalofrios.value && option2 === data.rubeola.value:
-      return setStateRubeola(state)   
-    case option1 === data.escalofrios.value && option2 === data.malaria.value:
-      return setStateMalaria(state)     
-    case option1 === data.escalofrios.value && option2 === data.tubercolosis.value:
-      return setStateTubercolosis(state)     
-    case option1 === data.jaqueca.value && option2 === data.rubeola.value:
-      return setStateRubeola(state)     
-    case option1 === data.secrecion.value && option2 === data.rubeola.value:
+    case JSON.stringify(payload) === JSON.stringify(rubeola):
+      console.log('el payload es rubeola')
       return setStateRubeola(state)
     default:
       console.log('No hay relacion entre los 2 sintomas')
@@ -60,30 +41,35 @@ const setStateGripe = state => ({
 
 const setStateRubeola = state => ({
   ...state,
+  disease: "Rubeola",
   recipe: ['Vacuna', 'Paracetamol'],
   specialist: ['Médico General', 'Endocrinólogo']
 })
 
 const setStateMalaria = state => ({
   ...state,
+  disease: "Malaria",
   recipe: ['Vacuna'],
   specialist: ['Médico General', 'Endocrinólogo']
 })
 
 const setStateHepatitis = state => ({
   ...state,
+  disease: "Hepatitis",
   recipe: ['Vacuna', 'Paracetamol'],
   specialist: ['Médico General', 'Endocrinólogo']
 })
 
 const setStateTubercolosis = state => ({
   ...state,
+  disease: "Tubercolosis",
   recipe: ['Paracetamol'],
   specialist: ['Médico General']
 })
 
 const setStateAnemia = state => ({
   ...state,
+  disease: "Anemia",
   recipe: ['Vitamina'],
   specialist: ['Nutriologo']
 })
