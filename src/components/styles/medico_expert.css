@@ -1,0 +1,28 @@
+.Info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  user-select: none;
+}
+
+.Select {
+  border-radius: 10px;
+  padding: 5px 10px;
+  outline: 0;
+  margin-bottom: 15px;
+  user-select: none;
+  outline: none;
+  color: gray;
+}
+
+option {
+  outline: none;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.Select:focus {
+  color: initial;
+}
+

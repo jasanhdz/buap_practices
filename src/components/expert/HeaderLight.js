@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 
 const HeaderLight = () => {
   return (
-    <div className='HeaderLight'>
-      <Link style={{ textDecoration: 'none' }} to='/'>
-        <h2 className='back'>🏡👈</h2>
-      </Link>
+    <div className="Header_Container">
+      <div className='HeaderLight'>
+        <Link style={{ textDecoration: 'none' }} to='/'>
+          <h2 className='back'>🏡👈</h2>
+        </Link>
+      </div>
     </div>
   );
 };
